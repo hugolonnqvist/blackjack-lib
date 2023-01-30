@@ -1,7 +1,7 @@
 import Card from "./models/Card";
 import initDealerCards from "./dealCards/dealerCards/initDealerCards";
 import initPlayerCards from "./dealCards/playerCards/initPlayerCards";
-import getNextCard from "./getNextCard";
+import getNextCard from "./dealCards/getNextCard";
 
 const nextCard = getNextCard();
 let playerCards: Card[][] = [];

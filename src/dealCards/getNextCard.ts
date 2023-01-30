@@ -1,4 +1,4 @@
-import generateDeck from "./generateDeck";
+import generateDeck from "../generateDeck";
 
 const getNextCard = () => {
   const deck = generateDeck();

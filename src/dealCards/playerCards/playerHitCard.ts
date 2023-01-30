@@ -11,7 +11,7 @@ const playerHitCard = ({
   handIndex,
   nextCard,
 }: playerHitCardProps) => {
-  playerCards.map((v, i) => (i === handIndex ? [v, nextCard()] : v));
+  return playerCards.map((v, i) => (i === handIndex ? [v, nextCard()] : v));
 };
 
 export default playerHitCard;

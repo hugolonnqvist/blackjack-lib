@@ -1,10 +1,10 @@
 interface splitBetProps {
-  handIndex: number;
-  handBets: number[];
   totalMoney: number;
+  handBets: number[];
+  handIndex: number;
 }
 
-const splitBet = ({ handIndex, handBets, totalMoney }: splitBetProps) => {
+const splitBet = ({ totalMoney, handBets, handIndex }: splitBetProps) => {
   const newBets = [...handBets];
 
   for (let i = newBets.length; handIndex + 1 < i; i--) {

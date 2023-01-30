@@ -1,14 +1,11 @@
 import Card from "../../models/Card";
 
 interface initDealerCardsProps {
-  dealerCards: Card[];
   nextCard: () => Card;
 }
 
-const initDealerCards = ({ dealerCards, nextCard }: initDealerCardsProps) => {
-  dealerCards = [nextCard(), nextCard()];
-
-  return dealerCards;
+const initDealerCards = ({ nextCard }: initDealerCardsProps) => {
+  return [nextCard(), nextCard()];
 };
 
 export default initDealerCards;
