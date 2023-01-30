@@ -2,7 +2,7 @@ import { describe, test, expect } from "@jest/globals";
 import getNextCard from "../../src/dealCards/getNextCard";
 import playerHitCard from "../../src/dealCards/playerCards/playerHitCard";
 import initPlayerCards from "../../src/dealCards/playerCards/initPlayerCards";
-import Card from "../models/Card";
+import Card from "../../src/models/Card";
 
 describe("Test playerHitCards", () => {
   test("Increments chosen hand by one card", () => {

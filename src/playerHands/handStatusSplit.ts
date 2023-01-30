@@ -1,14 +1,14 @@
-interface updateHandsAfterSplitProps {
+interface handStatusSplitProps {
   canHit: boolean[];
   canDouble: boolean[];
   handIndex: number;
 }
 
-const updateHandsAfterSplit = ({
+const handStatusSplit = ({
   canHit,
   canDouble,
   handIndex,
-}: updateHandsAfterSplitProps) => {
+}: handStatusSplitProps) => {
   const newCanHit = [...canHit];
   const newCanDouble = [...canDouble];
 
@@ -23,4 +23,4 @@ const updateHandsAfterSplit = ({
   return { newCanHit, newCanDouble };
 };
 
-export default updateHandsAfterSplit;
+export default handStatusSplit;

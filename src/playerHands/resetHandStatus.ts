@@ -1,7 +1,5 @@
 const resetHandStatus = () => {
-  const canHit = [true];
-  const canDouble = [true];
-  return { canHit, canDouble };
+  return { canHit: [true], canDouble: [true] };
 };
 
 export default resetHandStatus;
