@@ -2,7 +2,7 @@ interface updateMoneyProps {
   totalMoney: number;
   handBets: number[];
   handIndex: number;
-  result: string;
+  result: "Blackjack" | "Win" | "Lost" | "Push";
 }
 
 const updateMoney = ({

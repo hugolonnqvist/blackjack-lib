@@ -2,6 +2,7 @@ import { describe, test, expect } from "@jest/globals";
 import initBets from "../src/money/initBets";
 import doubleBet from "../src/money/doubleBet";
 import splitBet from "../src/money/splitBet";
+import updateMoney from "../src/money/updateMoney";
 
 describe("Test initBets", () => {
   test("Returns correct new money", () => {
@@ -41,5 +42,68 @@ describe("Test splitBet", () => {
       splitBet({ totalMoney: 100, handBets: [10, 20], handIndex }).newBets
         .length
     ).toBe(3);
+  });
+
+  test("Returns correct new total money", () => {
+    const totalMoney = 100;
+    const handBets = [10, 20, 30];
+    expect(splitBet({ totalMoney, handBets, handIndex }).newTotalMoney).toBe(
+      totalMoney - handBets[handIndex]
+    );
+  });
+
+  test("Returns correct new bets", () => {
+    const handBets = [50, 20, 30];
+    expect(
+      splitBet({ totalMoney: 100, handBets, handIndex: 1 }).newBets
+    ).toStrictEqual([50, 20, 20, 30]);
+  });
+});
+
+describe("Test updateMoney", () => {
+  const handBets = [10, 20, 10];
+
+  test("Returns correct new total money with blackjack result", () => {
+    expect(
+      updateMoney({
+        totalMoney: 100,
+        handBets,
+        handIndex: 1,
+        result: "Blackjack",
+      })
+    ).toBe(150);
+  });
+
+  test("Returns correct new total money with win result", () => {
+    expect(
+      updateMoney({
+        totalMoney: 100,
+        handBets,
+        handIndex: 1,
+        result: "Win",
+      })
+    ).toBe(140);
+  });
+
+  test("Returns correct new total money with lost result", () => {
+    expect(
+      updateMoney({
+        totalMoney: 100,
+        handBets,
+        handIndex: 1,
+        result: "Lost",
+      })
+    ).toBe(100);
+  });
+
+  test("Returns correct new total money with push result", () => {
+    expect(
+      updateMoney({
+        totalMoney: 100,
+        handBets,
+        handIndex: 1,
+        result: "Push",
+      })
+    ).toBe(120);
   });
 });
