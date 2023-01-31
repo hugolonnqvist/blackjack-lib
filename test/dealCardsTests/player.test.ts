@@ -1,5 +1,5 @@
 import { describe, test, expect } from "@jest/globals";
-import getNextCard from "../../src/dealCards/getNextCard";
+import getNextCard from "../../src/deck/getNextCard";
 import playerHitCard from "../../src/dealCards/playerCards/playerHitCard";
 import initPlayerCards from "../../src/dealCards/playerCards/initPlayerCards";
 import Card from "../../src/models/Card";

@@ -11,8 +11,11 @@ interface endRoundProps {
 
 const endRound = ({ dealerCards, playerCards, nextCard }: endRoundProps) => {
   let dealerCardsCopy = [...dealerCards];
+
   while (getHandValue(dealerCardsCopy) < 17) {
     dealerCardsCopy = dealerHitCard({ dealerCards, nextCard });
   }
   return calculateResults({ dealerCards, playerCards });
 };
+
+export default endRound;

@@ -1,6 +1,6 @@
 import { describe, test, expect } from "@jest/globals";
 import Card from "../../src/models/Card";
-import getNextCard from "../../src/dealCards/getNextCard";
+import getNextCard from "../../src/deck/getNextCard";
 import initDealerCards from "../../src/dealCards/dealerCards/initDealerCards";
 import dealerHitCard from "../../src/dealCards/dealerCards/dealerHitCard";
 
