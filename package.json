@@ -1,10 +1,14 @@
 {
   "name": "@hugoloennqvist/blackjack-lib",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Library for blackjack",
-  "main": "./src/index.ts",
+  "main": "./dist/index.js",
+  "types": "./types/index.d.ts",
   "scripts": {
-    "test": "jest ./test/**.test.ts ./test/**/*.test.ts"
+    "test": "jest ./test/**.test.ts ./test/**/*.test.ts",
+    "build": "tsc --build",
+    "clean": "tsc --build --clean"
+
   },
   "author": "Hugo Lönnqvist Österberg",
   "license": "ISC",

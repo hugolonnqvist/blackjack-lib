@@ -1,1 +1,1 @@
-A basic lib for blackjack written in typescript.
+A basic lib for the card game blackjack written in typescript.
