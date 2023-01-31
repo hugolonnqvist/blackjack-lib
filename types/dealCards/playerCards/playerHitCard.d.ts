@@ -4,5 +4,5 @@ interface playerHitCardProps {
     handIndex: number;
     nextCard: () => Card;
 }
-declare const playerHitCard: ({ playerCards, handIndex, nextCard, }: playerHitCardProps) => (Card | Card[])[][];
+declare const playerHitCard: ({ playerCards, handIndex, nextCard, }: playerHitCardProps) => Card[][];
 export default playerHitCard;
