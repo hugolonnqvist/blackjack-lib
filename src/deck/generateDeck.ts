@@ -17,10 +17,10 @@ const cards = [
 ] as const;
 
 const suits = [
-  { suit: "Hearts" },
-  { suit: "Diamonds" },
-  { suit: "Spades" },
-  { suit: "Clubs" },
+  { suit: "Hearts", suitSymbol: "\u{2665}" },
+  { suit: "Diamonds", suitSymbol: "\u{2666}" },
+  { suit: "Spades", suitSymbol: "\u{2660}" },
+  { suit: "Clubs", suitSymbol: "\u{2663}" },
 ] as const;
 
 const shuffleDeck = (deck: Card[]): void => {
@@ -36,7 +36,7 @@ const generateDeck = (numberOfDecks: 1 | 2 | 3 | 4 | 5 | 6): Card[] => {
   const addOneDeck = () => {
     for (const card of cards) {
       for (const suit of suits) {
-        deck.push(new Card(card.label, card.value, suit.suit));
+        deck.push(new Card(card.label, card.value, suit.suit, suit.suitSymbol));
       }
     }
   };
