@@ -10,8 +10,8 @@ const playerHitCard = ({
   playerCards,
   handIndex,
   nextCard,
-}: playerHitCardProps) => {
-  return playerCards.map((v, i) => (i === handIndex ? [v, nextCard()] : v));
+}: playerHitCardProps): Card[][] => {
+  return playerCards.map((v, i) => (i === handIndex ? [...v, nextCard()] : v));
 };
 
 export default playerHitCard;
