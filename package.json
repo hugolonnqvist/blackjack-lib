@@ -1,6 +1,6 @@
 {
   "name": "@hugoloennqvist/blackjack-lib",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Library for blackjack",
   "main": "./dist/index.js",
   "types": "./types/index.d.ts",

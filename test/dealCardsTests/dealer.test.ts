@@ -5,28 +5,31 @@ import initDealerCards from "../../src/dealCards/dealerCards/initDealerCards";
 import dealerHitCard from "../../src/dealCards/dealerCards/dealerHitCard";
 
 describe("Test dealerHitCard", () => {
+  const nextCard = getNextCard();
   test("Can hit empty array", () => {
     expect(
-      dealerHitCard({ dealerCards: [], nextCard: getNextCard() }).length
+      dealerHitCard({ dealerCards: [], nextCard: nextCard() }).length
     ).toBe(1);
   });
   test("Increments length of cards by one", () => {
     expect(
       dealerHitCard({
-        dealerCards: [getNextCard()(), getNextCard()()],
-        nextCard: getNextCard(),
+        dealerCards: [nextCard()(), nextCard()()],
+        nextCard: nextCard(),
       }).length
     ).toBe(3);
   });
+});
 
-  describe("Test initDealercards", () => {
-    test("Returns array of two elements", () => {
-      expect(initDealerCards({ nextCard: getNextCard() }).length).toBe(2);
-    });
-    test("Reaturns array of type Card", () => {
-      expect(initDealerCards({ nextCard: getNextCard() })).toBeInstanceOf(
-        Array<Card>
-      );
-    });
+describe("Test initDealercards", () => {
+  const nextCard = getNextCard();
+
+  test("Returns array of two elements", () => {
+    expect(initDealerCards({ nextCard: nextCard() }).length).toBe(2);
+  });
+  test("Reaturns array of type Card", () => {
+    expect(initDealerCards({ nextCard: nextCard() })).toBeInstanceOf(
+      Array<Card>
+    );
   });
 });

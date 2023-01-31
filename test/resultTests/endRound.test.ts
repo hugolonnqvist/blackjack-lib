@@ -4,13 +4,13 @@ import endRound from "../../src/results/endRound";
 import getNextCard from "../../src/deck/getNextCard";
 
 describe("Test endRound", () => {
+  const nextCard = getNextCard();
   const blackjack = [
     new Card("Ace", 11, "Hearts"),
     new Card("King", 10, "Hearts"),
   ];
   const seventeen = [new Card("Ace", 11, "Hearts"), new Card("6", 6, "Hearts")];
   const twelve = [new Card("7", 7, "Hearts"), new Card("5", 5, "Hearts")];
-  const nextCard = getNextCard();
   const bust = [
     new Card("10", 10, "Hearts"),
     new Card("10", 10, "Hearts"),
@@ -21,7 +21,7 @@ describe("Test endRound", () => {
       endRound({
         dealerCards: blackjack,
         playerCards: [seventeen, twelve],
-        nextCard,
+        nextCard: nextCard(),
       })
     ).toStrictEqual(["Lost", "Lost"]);
   });
@@ -31,7 +31,7 @@ describe("Test endRound", () => {
       endRound({
         dealerCards: twelve,
         playerCards: [bust, twelve],
-        nextCard,
+        nextCard: nextCard(),
       })
     ).toContain("Lost");
   });
@@ -41,10 +41,10 @@ describe("Test endRound", () => {
       endRound({
         dealerCards: bust,
         playerCards: [
-          [nextCard(), nextCard()],
-          [nextCard(), nextCard()],
+          [nextCard()(), nextCard()()],
+          [nextCard()(), nextCard()()],
         ],
-        nextCard,
+        nextCard: nextCard(),
       })
     ).toContain("Win" || "Blackjack");
   });

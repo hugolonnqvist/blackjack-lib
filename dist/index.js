@@ -1,52 +1,18 @@
 "use strict";
-var __importDefault =
-  (this && this.__importDefault) ||
-  function (mod) {
-    return mod && mod.__esModule ? mod : { default: mod };
-  };
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.hasBlackjack =
-  exports.getHandValue =
-  exports.endRound =
-  exports.calculateResults =
-  exports.resetHandStatus =
-  exports.initHandStatus =
-  exports.handStatusSplit =
-  exports.disableHit =
-  exports.disableDouble =
-  exports.disableAll =
-  exports.updateMoney =
-  exports.splitBet =
-  exports.initBets =
-  exports.doubleBet =
-  exports.Card =
-  exports.getNextCard =
-  exports.generateDeck =
-  exports.playerSplitCards =
-  exports.playerHitCard =
-  exports.initPlayerCards =
-  exports.initDealerCards =
-  exports.dealerHitCard =
-    void 0;
-const dealerHitCard_1 = __importDefault(
-  require("./dealCards/dealerCards/dealerHitCard")
-);
+exports.hasBlackjack = exports.getHandValue = exports.endRound = exports.calculateResults = exports.resetHandStatus = exports.initHandStatus = exports.handStatusSplit = exports.disableHit = exports.disableDouble = exports.disableAll = exports.updateMoney = exports.splitBet = exports.initBets = exports.doubleBet = exports.Card = exports.getNextCard = exports.generateDeck = exports.playerSplitCards = exports.playerHitCard = exports.initPlayerCards = exports.initDealerCards = exports.dealerHitCard = void 0;
+const dealerHitCard_1 = __importDefault(require("./dealCards/dealerCards/dealerHitCard"));
 exports.dealerHitCard = dealerHitCard_1.default;
-const initDealerCards_1 = __importDefault(
-  require("./dealCards/dealerCards/initDealerCards")
-);
+const initDealerCards_1 = __importDefault(require("./dealCards/dealerCards/initDealerCards"));
 exports.initDealerCards = initDealerCards_1.default;
-const initPlayerCards_1 = __importDefault(
-  require("./dealCards/playerCards/initPlayerCards")
-);
+const initPlayerCards_1 = __importDefault(require("./dealCards/playerCards/initPlayerCards"));
 exports.initPlayerCards = initPlayerCards_1.default;
-const playerHitCard_1 = __importDefault(
-  require("./dealCards/playerCards/playerHitCard")
-);
+const playerHitCard_1 = __importDefault(require("./dealCards/playerCards/playerHitCard"));
 exports.playerHitCard = playerHitCard_1.default;
-const playerSplitCards_1 = __importDefault(
-  require("./dealCards/playerCards/playerSplitCards")
-);
+const playerSplitCards_1 = __importDefault(require("./dealCards/playerCards/playerSplitCards"));
 exports.playerSplitCards = playerSplitCards_1.default;
 const generateDeck_1 = __importDefault(require("./deck/generateDeck"));
 exports.generateDeck = generateDeck_1.default;
@@ -68,21 +34,13 @@ const disableDouble_1 = __importDefault(require("./playerHands/disableDouble"));
 exports.disableDouble = disableDouble_1.default;
 const disableHit_1 = __importDefault(require("./playerHands/disableHit"));
 exports.disableHit = disableHit_1.default;
-const handStatusSplit_1 = __importDefault(
-  require("./playerHands/handStatusSplit")
-);
+const handStatusSplit_1 = __importDefault(require("./playerHands/handStatusSplit"));
 exports.handStatusSplit = handStatusSplit_1.default;
-const initHandStatus_1 = __importDefault(
-  require("./playerHands/initHandStatus")
-);
+const initHandStatus_1 = __importDefault(require("./playerHands/initHandStatus"));
 exports.initHandStatus = initHandStatus_1.default;
-const resetHandStatus_1 = __importDefault(
-  require("./playerHands/resetHandStatus")
-);
+const resetHandStatus_1 = __importDefault(require("./playerHands/resetHandStatus"));
 exports.resetHandStatus = resetHandStatus_1.default;
-const calculateResults_1 = __importDefault(
-  require("./results/calculateResults")
-);
+const calculateResults_1 = __importDefault(require("./results/calculateResults"));
 exports.calculateResults = calculateResults_1.default;
 const endRound_1 = __importDefault(require("./results/endRound"));
 exports.endRound = endRound_1.default;

@@ -1,6 +1,6 @@
 import generateDeck from "./generateDeck";
 
-const getNextCard = () => {
+const getNextCard = () => () => {
   const deck = generateDeck(4);
   let index = 0;
 

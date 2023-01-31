@@ -1,2 +1,2 @@
-declare const getNextCard: () => () => import("..").Card;
+declare const getNextCard: () => () => () => import("..").Card;
 export default getNextCard;

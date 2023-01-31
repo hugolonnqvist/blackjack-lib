@@ -5,6 +5,6 @@ import getNextCard from "../../src/deck/getNextCard";
 describe("Test getNextCard", () => {
   const nextCard = getNextCard();
   test("Returns a valid card element", () => {
-    expect(nextCard()).toBeInstanceOf(Card);
+    expect(nextCard()()).toBeInstanceOf(Card);
   });
 });

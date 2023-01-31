@@ -6,7 +6,7 @@ import getNextCard from "../../src/deck/getNextCard";
 describe("Test getHandValue", () => {
   const ace = new Card("A", 11, "Hearts");
   const five = new Card("5", 5, "Hearts");
-  const randomCard = getNextCard()();
+  const randomCard = getNextCard()()();
 
   test("Works one a single card", () => {
     expect(getHandValue([randomCard])).toBe(randomCard.value);
